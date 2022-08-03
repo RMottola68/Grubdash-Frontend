@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-function FoodItem() {
+function FoodItem({ meal }) {
     return(
         <div>
-            <div>{FoodItem.name}</div>
+            <div>{meal.name}</div>
         </div>
     )
 }

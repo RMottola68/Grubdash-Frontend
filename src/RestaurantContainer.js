@@ -7,16 +7,22 @@ function Restaurants() {
     const [restaurantFilter, setRestaurantFilter] = ('');
 
     function getRestaurants(){
-        fetch(`http://localhost:3001/Restaurants`)
+        fetch(`http://localhost:9292/restaurants`)
         .then((res)=>res.json())
-        .then((restaurantData)=> setRestaurants(restaurantData.results))
+        .then((restaurantData) => setRestaurants(restaurantData))
     }
     
     useEffect(getRestaurants,[])
+    // console.log(restaurants)
 
+    const renderRestaurants = restaurants.map((restaurant) => {
+        return(
+            <Restaurant key={restaurant.id} restaurant={restaurant} />
+        )
+    }) 
     return(
         <div>
-            <Restaurant />
+            {renderRestaurants}
         </div>
     )
 }

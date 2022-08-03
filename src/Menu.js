@@ -1,12 +1,35 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import FoodItem from './FoodItem'
-function Menu() {
+function Menu({ restaurant }) {
+
+    const [meals, setMeals] = useState([]);
+    const [menu, setMenu] = useState([]);
+
+    function getMenu(){
+        fetch(`http://localhost:9292/restaurants/${restaurant.id}/menu`)
+        .then((res)=>res.json())
+        .then((menuData) => setMenu(menuData))
+    }
+
+    function getMeals(){
+        fetch(`http://localhost:9292/restaurants/${restaurant.id}/menu/meals`)
+        .then((res)=>res.json())
+        .then((mealData) => setMeals(mealData))
+    }
+    
+    useEffect(getMenu,[])
+    useEffect(getMeals,[])
+    console.log(meals)
+
+    const renderMeals = meals.map((meal) => {
+        return(
+            <FoodItem meal={meal} />
+        
+        )
+    })
     return(
         <div>
-            <FoodItem>Taco</ FoodItem>
-            <FoodItem>Birria</ FoodItem>
-            <FoodItem>Empenadas</ FoodItem>
-            <FoodItem>Enchilada</ FoodItem>
+            {renderMeals}
         </div>
     )
 }

@@ -48,11 +48,11 @@ function Navigation() {
                             <h2 className="pt-5 d-flex justify-content-center">GrubDash</h2>
                             <div className="d-flex justify-content-center">
                                 <Button className="m-3 " variant="danger" type="button">
-                                    <Link className="text-decoration-none  text-white" to="/MyOrder">My Order</Link>
+                                    <Link className="text-decoration-none  text-white" to="/myorder">My Order</Link>
                                 </Button>
                             
                                 <Button className="m-3 " variant="danger">
-                                    <Link  className="text-decoration-none  text-white" to="/Restaurants">Restaurants</Link>
+                                    <Link  className="text-decoration-none  text-white" to="/restaurants">Restaurants</Link>
                                 </Button>
                             </div>
                         </Nav.Item>

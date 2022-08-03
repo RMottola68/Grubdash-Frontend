@@ -15,8 +15,8 @@ function App() {
       <Navigation />
       <Routes>
         {/* search elements in react router */}
-        <Route path="MyOrder" element={<MyOrder />} className="isActive"  />
-        <Route path="Restaurants" element={<RestaurantContainer />} />
+        <Route path="myorder" element={<MyOrder />} className="isActive"  />
+        <Route path="restaurants" element={<RestaurantContainer />} />
       </Routes>
     </div>
   );
