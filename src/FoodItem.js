@@ -6,7 +6,8 @@ const [order, setOrder] = useState([]);
 function handleAdd () {
     const foodObj = {
         name: meal.name,
-        price: meal.price
+        price: meal.price,
+        quantity: 1
     }
 
     fetch("http://localhost:9292/orders",{
@@ -17,9 +18,10 @@ function handleAdd () {
     .then(res => res.json())
     .then(mealData => {
         console.log(mealData)
-        setOrder(prevState => prevState = [...order, foodObj])
+        // setOrder((prevState) => prevState = [...order, foodObj])
+        
     })
-
+    console.log(order)
 }
 
 
