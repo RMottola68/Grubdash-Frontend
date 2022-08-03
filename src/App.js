@@ -13,10 +13,10 @@ function App() {
   return (
     <div >
       <Navigation />
-      <Routes>
+      <Routes >
         {/* search elements in react router */}
-        <Route path="myorder" element={<MyOrder />} className="isActive"  />
-        <Route path="restaurants" element={<RestaurantContainer />} />
+        <Route path="myorder" element={<MyOrder />} />
+        <Route path="restaurants" element={<RestaurantContainer className="isActive"/>} />
       </Routes>
     </div>
   );

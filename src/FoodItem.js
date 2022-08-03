@@ -3,7 +3,7 @@ import { useState } from 'react';
 function FoodItem({ meal }) {
     return(
         <div>
-            <div>{meal.name}</div>
+            <div style={{fontSize: "25px"}}>{meal.name}</div>
         </div>
     )
 }

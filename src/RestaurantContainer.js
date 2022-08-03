@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Restaurant from './Restaurant'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col, Form, Button, Navbar } from 'react-bootstrap';
 function Restaurants() {
 
     const [restaurants, setRestaurants] = useState([]);
@@ -17,12 +18,17 @@ function Restaurants() {
 
     const renderRestaurants = restaurants.map((restaurant) => {
         return(
-            <Restaurant key={restaurant.id} restaurant={restaurant} />
+            <Col  xs={3} className="text-dark">
+                <Restaurant className="xs-mt-5 p-5"  key={restaurant.id} restaurant={restaurant}  />
+            </Col>
         )
     }) 
+
     return(
-        <div>
-            {renderRestaurants}
+        <div className="text-light" style={{marginTop: "170px"}}>
+            <Row className="bg-dark">
+                {renderRestaurants}
+            </Row>
         </div>
     )
 }

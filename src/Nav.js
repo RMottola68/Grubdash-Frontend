@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import GrubDashLogo from './assets/GrubDashLogo.png'
 import { Link } from "react-router-dom";
 
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Navbar } from 'react-bootstrap';
 
 
 function Navigation() {
@@ -31,9 +31,11 @@ function Navigation() {
     
     window.addEventListener('scroll', toggleVisible);
     return(
-        <Container fluid>
-            <Row className="p-0 " style={{borderBottom:"solid black 2px",marginBottom:"10px",background:"rgb(255,165,0)"}}>
+        
+        <Navbar className="p-0 m-0 " fixed="top">
+            <Row className="p-0 m-0 " style={{borderBottom:"solid black 2px",background:"rgb(255,165,0)", width: "100%"}}>
                 <Nav 
+                
                 activeKey="/home"
                 onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
                 >
@@ -64,7 +66,8 @@ function Navigation() {
                 <span class="material-symbols-outlined" onClick={scrollToTop} style={{height:"fit-content"}}>arrow_upward</span>
                 </Button>
             </Row>
-            </Container>
+        </Navbar >
+        
         
   
     )
