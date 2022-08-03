@@ -3,8 +3,6 @@ import Restaurant from './Restaurant'
 
 function MyOrder() {
 
-
-
 // fetch("http://localhost:9292/orders", {
 //     method: "POST",
 //     headers: {

@@ -2,14 +2,23 @@ import { useState } from 'react';
 import { Container, Row, Col, Form, Button, Navbar } from 'react-bootstrap';
 
 function FoodItem({ meal }) {
-
+const [order, setOrder] = useState([]);
 function handleAdd () {
-   //callbaack
-//    const mealObj
-// + post request >>> mealObj to Order 
-//
-//flow 
-//a click adds item to order object
+    const foodObj = {
+        name: meal.name,
+        price: meal.price
+    }
+
+    fetch("http://localhost:9292/orders",{
+        method:'POST',
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(foodObj)
+    })
+    .then(res => res.json())
+    .then(mealData => {
+        console.log(mealData)
+        setOrder(prevState => prevState = [...order, foodObj])
+    })
 
 }
 
