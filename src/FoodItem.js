@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Container, Row, Col, Form, Button, Navbar } from 'react-bootstrap';
 
 function FoodItem({ meal }) {
-const [order, setOrder] = useState([]);
+
 function handleAdd () {
     const foodObj = {
         name: meal.name,
