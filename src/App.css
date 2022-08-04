@@ -2,6 +2,10 @@
     background-color: ;
 } */
 
-.rounded-card {
+/* .rounded-card {
     border-radius: 30px
-}
+} */
+
+.border-1 {
+    border-width: 10px !important;
+  }

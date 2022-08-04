@@ -3,7 +3,7 @@ import Menu from './Menu';
 function Restaurant({ restaurant }) {
     
     return(
-        <div className="bg-light p-3 mt-3 m" style={{borderRadius: "30px"}}>
+        <div className="bg-light p-3 mt-3  border-1 border border-warning" style={{borderRadius: "30px"}}>
             <div>
                 <div className="" style={{fontSize: "30px", fontWeight: "bold" }} >{restaurant.name}</div>
                 <div style={{fontSize: "25px"}}>{restaurant.city}</div>

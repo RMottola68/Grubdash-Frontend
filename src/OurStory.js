@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState, useEffect } from 'react';
 
+
 function OurStory( {onAddRest}) {
 const [form, setForm] = useState({name: "", rating: "", city: "", price: ""})
 
@@ -38,9 +39,13 @@ function handleSubmit(e){
 
 
     return (
-        <div  style={{margin: "180px"}}>
+        <div  className="bg-light p-3 border border-1 border-warning" style={{margin: "174px", borderRadius: "30px"}}>
             
-            Our beautiful bb boy Our beautiful bb boy Our beautiful bb boy Our beautiful bb boy Our beautiful bb boy Our beautiful bb boy
+            <h4>GrubDash is your new favorite mobile local social app disrupting the food industry. 
+              In our ever-expanding breadth, GrubDash is continually unlocking key restaurant partners while earning locked in and loyal consumer allies. 
+              We pride ourselves in wedding inspired makers with forward-tasters as we dismantle and rebuild the food space. 
+              If you think your buds are both accessible and discerning, and we aren't already servicing your go to eatery please, give us your data:
+            </h4>
 
             {/* {photo grass roots meets big tech } */}
 

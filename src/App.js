@@ -10,6 +10,7 @@ import Navigation from "./Nav";
 import RestaurantContainer from "./RestaurantContainer"
 import MyOrder from "./MyOrder"
 import OurStory from './OurStory';
+import './App.css'
 
 
 function App() {
@@ -20,9 +21,9 @@ function App() {
 
   const [order, setOrder] = useState([]);
   return (
-    <div >
+    <div className="bg-dark" style={{heigh: "100vh", minHeight: "100vh"}}>
       <Navigation />
-      <Routes >
+      <Routes>
         {/* search elements in react router */}
         <Route path="ourstory" element={<OurStory onAddRest={onAddRest} />} />
         <Route path="myorder" element={<MyOrder setOrder={setOrder} order={order} />}  />

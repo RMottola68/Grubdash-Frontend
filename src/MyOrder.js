@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import OrderItem from './OrderItem';
 import Restaurant from './Restaurant'
+import { Container, Row } from 'react-bootstrap';
 
 function MyOrder({ order, setOrder }) {
     // const [order, setOrder] = useState([]);
@@ -17,13 +18,17 @@ function MyOrder({ order, setOrder }) {
 
     const renderOrders = order.map((orderItem) => {
         return(
-            <OrderItem className = "bg-light" setOrder={setOrder} order={order} orderItem={orderItem} key={orderItem.id} />
+            <OrderItem className="m-5" setOrder={setOrder} order={order} orderItem={orderItem} key={orderItem.id} />
         ) 
     })
 
 return(
-    <div className="bg-dark" style={{marginTop: "182px"}}>
-        {renderOrders}
+    <div className="bg-light border border-1 border-warning justify-contents-center" style={{marginTop: "174px", marginRight: "220px", marginLeft: "220px", borderRadius: "30px"}}>
+        <Container>
+            <Row>
+                {renderOrders}
+            </Row>
+        </Container>
     </div>
 )
 }

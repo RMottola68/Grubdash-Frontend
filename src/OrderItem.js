@@ -44,14 +44,18 @@ function OrderItem({ order, setOrder, orderItem }) {
     body: JSON.stringify({ quantity: counter }),
   })
     .then((r) => r.json())
-    .then((updatedItem) => console.log(updatedItem));
-  console.log(counter);
-  console.log(orderItem);
+    .then((updatedItem) => console.log(updatedItem))
+    if(counter === 0){
+      handleDelete()
+    }
+      console.log(counter);
+      console.log(orderItem);
+
 
   // if count goes to 0, delete item on backend, 
 
   return (
-    <div>
+    <div className="">
       <div className="m-3" style={{ fontSize: "25px" }}>
         {orderItem.name}
         <Button className="mx-3" variant="danger" onClick={() => handleDecrease()}>
@@ -63,6 +67,7 @@ function OrderItem({ order, setOrder, orderItem }) {
           {" "}
           +{" "}
         </Button>
+        ${(orderItem.price)*counter}
         <Button
           className="mx-3"
           variant="danger"

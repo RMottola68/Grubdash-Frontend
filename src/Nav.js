@@ -32,8 +32,8 @@ function Navigation() {
     window.addEventListener('scroll', toggleVisible);
     return(
         
-        <Navbar className="p-0 m-0 " fixed="top">
-            <Row className="p-0 m-0 " style={{borderBottom:"solid black 2px",background:"rgb(255,165,0)", width: "100%"}}>
+        <Navbar className="p-0 m-0" fixed="top">
+            <Row className="p-0 m-0" style={{borderBottom:"solid black 2px",background:"rgb(255,165,0)", width: "100%"}}>
                 <Nav 
                 
                 activeKey="/home"

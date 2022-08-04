@@ -21,7 +21,7 @@ function Restaurants( { setRestaurants, restaurants } ) {
 
     const renderRestaurants = restaurants.map((restaurant) => {
         return(
-            <Col  xs={3} className="text-dark" key={restaurant.id}> 
+            <Col  xs={3} className="text-dark " key={restaurant.id}> 
                 <Restaurant className="xs-mt-5 p-5" restaurant={restaurant}  />
             </Col>
         )
