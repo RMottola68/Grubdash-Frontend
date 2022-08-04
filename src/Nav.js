@@ -63,7 +63,7 @@ function Navigation() {
                     
                 </Nav>
                 <Button style={{display: visible ? 'inline' : 'none', position:"fixed",background:"rgb(50,50,50)",width:"fit-content",height:"fit-content",left:"90%",bottom:"40px",fontSize:"10px",zIndex:"99",cursor:"pointer", color:"red",border:"red"}}>
-                <span class="material-symbols-outlined" onClick={scrollToTop} style={{height:"fit-content"}}>arrow_upward</span>
+                <span className="material-symbols-outlined" onClick={scrollToTop} style={{height:"fit-content"}}>arrow_upward</span>
                 </Button>
             </Row>
         </Navbar >

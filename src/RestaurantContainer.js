@@ -18,8 +18,8 @@ function Restaurants() {
 
     const renderRestaurants = restaurants.map((restaurant) => {
         return(
-            <Col  xs={3} className="text-dark">
-                <Restaurant className="xs-mt-5 p-5"  key={restaurant.id} restaurant={restaurant}  />
+            <Col  xs={3} className="text-dark" key={restaurant.id}> 
+                <Restaurant className="xs-mt-5 p-5" restaurant={restaurant}  />
             </Col>
         )
     }) 

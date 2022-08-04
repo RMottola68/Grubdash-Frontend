@@ -19,11 +19,11 @@ function Menu({ restaurant }) {
     
     useEffect(getMenu,[])
     useEffect(getMeals,[])
-    console.log(meals)
+    //console.log(meals)
 
     const renderMeals = meals.map((meal) => {
         return(
-            <FoodItem meal={meal} />
+            <FoodItem meal={meal} key={meal.id}/>
         
         )
     })
