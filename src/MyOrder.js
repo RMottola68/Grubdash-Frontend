@@ -1,8 +1,10 @@
+import { render } from '@testing-library/react';
 import { useState, useEffect } from 'react';
+import OrderItem from './OrderItem';
 import Restaurant from './Restaurant'
 
-function MyOrder() {
-    const [order, setOrder] = useState([]);
+function MyOrder({ order, setOrder }) {
+    // const [order, setOrder] = useState([]);
     function orders()  {
         fetch("http://localhost:9292/orders")
         .then(res => res.json())
@@ -11,17 +13,17 @@ function MyOrder() {
         })
     }
     useEffect((orders), []);
-    console.log(order);
+    // console.log(order);
 
-    const renderOrders = order.map((order) => {
+    const renderOrders = order.map((orderItem) => {
         return(
-            // <Restaurant className="xs-mt-5 p-5" restaurant={restaurant}  />
+            <OrderItem setOrder={setOrder} order={order} orderItem={orderItem} key={orderItem.id} />
         ) 
     })
 
 return(
-    <div>
-        
+    <div style={{marginTop: "170px"}}>
+        {renderOrders}
     </div>
 )
 }
