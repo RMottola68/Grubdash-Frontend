@@ -12,16 +12,18 @@ function Menu({ restaurant }) {
     }
 
     function getMeals(){
-        fetch(`http://localhost:9292/restaurants/${restaurant.id}/menu/meals`)
+        fetch(`http://localhost:9292/restaurants/${restaurant.id}/meals`)
         .then((res)=>res.json())
         .then((mealData) => setMeals(mealData))
     }
     
     useEffect(getMenu,[])
     useEffect(getMeals,[])
-    //console.log(meals)
+    console.log(meals)
 
     const renderMeals = meals.map((meal) => {
+        // if(meal.length < 1)
+        // window.confirm('')
         return(
             <FoodItem meal={meal} key={meal.id}/>
         
@@ -29,7 +31,7 @@ function Menu({ restaurant }) {
     })
     return(
         <div>
-            {renderMeals}
+            {meals.length > 0 ? renderMeals : "There is no menu"}
         </div>
     )
 }
