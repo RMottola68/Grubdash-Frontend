@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import Restaurant from './Restaurant'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Form, Button, Navbar } from 'react-bootstrap';
-function Restaurants() {
 
-    const [restaurants, setRestaurants] = useState([]);
+function Restaurants( { setRestaurants, restaurants } ) {
+
+   
     const [restaurantFilter, setRestaurantFilter] = ('');
 
     function getRestaurants(){
@@ -12,6 +13,8 @@ function Restaurants() {
         .then((res)=>res.json())
         .then((restaurantData) => setRestaurants(restaurantData))
     }
+
+    
     
     useEffect(getRestaurants,[])
     // console.log(restaurants)

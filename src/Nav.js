@@ -56,6 +56,10 @@ function Navigation() {
                                 <Button className="m-3 " variant="danger">
                                     <Link  className="text-decoration-none  text-white" to="/restaurants">Restaurants</Link>
                                 </Button>
+
+                                <Button className="m-3 " variant="danger" type="button">
+                                    <Link className="text-decoration-none  text-white" to="/ourstory">Our Story</Link>
+                                </Button>
                             </div>
                         </Nav.Item>
                     </Col>
