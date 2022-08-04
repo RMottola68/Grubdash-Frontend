@@ -13,7 +13,7 @@ function handleChange (e) {
         }
     })
 }
-
+console.log(form.price)
 function handleSubmit(e){
     e.preventDefault();
     fetch ("http://localhost:9292/restaurants", {
@@ -47,12 +47,11 @@ function handleSubmit(e){
 
         <Form onSubmit={(e) => {
             e.preventDefault()
-            // handleSubmit(e)
-            console.log(e)
+            handleSubmit(e)
         }}>
       <Form.Group  className="mb-0" controlId="formBasicName" >
         <Form.Label> Restaurant name</Form.Label>
-        <Form.Control name="restName" type="string" placeholder="Enter Restaurant name" onChange={setForm} value={form.name}/>
+        <Form.Control name="name" type="string" placeholder="Enter Restaurant name" onChange={handleChange} value={form.name}/>
         <Form.Text className="text-muted">
         </Form.Text>
       </Form.Group>
