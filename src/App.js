@@ -3,7 +3,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Redirect,
+  Navigate,
   Link
 } from 'react-router-dom';
 import Navigation from "./Nav";
@@ -26,6 +26,7 @@ function App() {
       <Navigation />
       <Routes>
         {/* search elements in react router */}
+        <Route path="*" element={<Navigate to="/restaurants" replace/>} />
         <Route path="ourstory" element={<OurStory onAddRest={onAddRest} />} />
         <Route path="myorder" element={<MyOrder setOrder={setOrder} order={order} />}  />
         <Route path="restaurants" element={<RestaurantContainer restaurants={restaurants} setRestaurants={setRestaurants} className="isActive"/>} />
