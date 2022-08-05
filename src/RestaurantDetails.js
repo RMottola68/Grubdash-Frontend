@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom'
 import { Container, Row } from 'react-bootstrap';
+import Menu from './Menu';
+
 
 
 function RestaurantDetails() {
@@ -31,23 +33,8 @@ function RestaurantDetails() {
       <div className="bg-light border border-1 border-warning justify-contents-center" style={{marginTop: "174px", marginRight: "220px", marginLeft: "220px", borderRadius: "30px"}}>
         <Container>
             <Row>
-        <div className="card">
-          <div className="card__content">
-            <div className="card__title">{name}</div>
-            <p className="card__text">{city}</p>
-            <div className="card__detail">
-            <div className='desc'>
-              <h4>{rating}</h4>
-            
-            </div>
-              <p>{price}</p>
-              <p>
-                {city}
-              </p>
-              <p>{price}</p>
-            </div>
-          </div>
-        </div>
+              <h4 className="text-bold text-center" >MENU</h4>
+          <Menu restaurant={restaurant}/>
       </Row>
     </Container>
     </div>
