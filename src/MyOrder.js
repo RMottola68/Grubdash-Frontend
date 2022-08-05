@@ -5,7 +5,6 @@ import Restaurant from './Restaurant'
 import { Container, Row } from 'react-bootstrap';
 
 function MyOrder({ order, setOrder }) {
-    // const [order, setOrder] = useState([]);
     function orders()  {
         fetch("http://localhost:9292/orders")
         .then(res => res.json())
@@ -20,6 +19,7 @@ function MyOrder({ order, setOrder }) {
         return(
             <OrderItem className="m-5" setOrder={setOrder} order={order} orderItem={orderItem} key={orderItem.id} />
         ) 
+        
     })
 
 return(

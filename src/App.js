@@ -11,6 +11,7 @@ import RestaurantContainer from "./RestaurantContainer"
 import MyOrder from "./MyOrder"
 import OurStory from './OurStory';
 import './App.css'
+import RestaurantDetails from './RestaurantDetails';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="ourstory" element={<OurStory onAddRest={onAddRest} />} />
         <Route path="myorder" element={<MyOrder setOrder={setOrder} order={order} />}  />
         <Route path="restaurants" element={<RestaurantContainer restaurants={restaurants} setRestaurants={setRestaurants} className="isActive"/>} />
+        <Route path="/restaurants/:id" element={<RestaurantDetails />} />
       </Routes>
     </div>
   );
