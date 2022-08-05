@@ -28,7 +28,7 @@ function Restaurants( { setRestaurants, restaurants } ) {
     }) 
 
     return(
-        <div className="text-light" style={{marginTop: "170px"}}>
+        <div className="text-light p-5" style={{marginTop: "170px"}}>
             <Row className="bg-dark">
                 {renderRestaurants}
             </Row>

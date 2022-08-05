@@ -36,7 +36,7 @@ function handleSubmit(e){
             });
         
 };
-
+const team = "https://www.8w8.com/wp-content/uploads/2020/06/video_hbo.jpg"
 
     return (
         <div  className="bg-light p-3 border border-1 border-warning" style={{margin: "174px", borderRadius: "30px"}}>
@@ -47,7 +47,7 @@ function handleSubmit(e){
               If you think your buds are both accessible and discerning, and we aren't already servicing your go to eatery please, give us your data:
             </h4>
 
-            {/* {photo grass roots meets big tech } */}
+            <img src={team} alt="team photo" />
 
 
         <Form onSubmit={(e) => {

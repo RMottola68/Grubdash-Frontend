@@ -29,8 +29,23 @@ return(
                 {renderOrders}
             </Row>
         </Container>
+        
     </div>
 )
 }
 
 export default MyOrder;
+
+// <Button className="mx-3" variant="danger" onClick={() => handleCheckout()}>
+// {" "}
+// Checkout {" "}
+// </Button>
+// </div>
+
+// const [orderTotal, setOrderTotal] = useState([])
+//   function handleCheckout() {
+//     // works great for 1 item
+//     // for new item, needs a new slice of state touching each items in order and + and - as well
+//     // maybe for demo, we do the dance and only check out w 1 item say, 2 each
+//     alert(`$${(orderItem.price)*counter} will be charged to your account. GrubHub out!`)
+//   }

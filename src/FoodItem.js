@@ -1,7 +1,11 @@
 import { Button } from 'react-bootstrap';
+import Alert from 'react-bootstrap/Alert';
 
 function FoodItem({ meal }) {
+
     function handleAdd () {
+        alert("Another one!");
+        
         const foodObj = {
             name: meal.name,
             price: meal.price,
@@ -24,9 +28,10 @@ function FoodItem({ meal }) {
 
 
     return(
-        <div>
-            <div style={{fontSize: "25px"}}>{meal.name}</div>
-            <Button onClick={() => handleAdd()}> Add to My Order</Button>
+        <div >
+            <img src={meal.image_url}/>
+            <div style={{fontSize: "25px"}}>{meal.name} || ${meal.price}</div>
+            <Button onClick={() => handleAdd()}> Add to My Order </Button>
         </div>
     )
 }

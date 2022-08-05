@@ -33,7 +33,8 @@ function RestaurantDetails() {
       <div className="bg-light border border-1 border-warning justify-contents-center" style={{marginTop: "174px", marginRight: "220px", marginLeft: "220px", borderRadius: "30px"}}>
         <Container>
             <Row>
-              <h4 className="text-bold text-center" >MENU</h4>
+              <br></br>
+              <h4 className="text-bold text-center mt-3"> {restaurant.name} </h4>
           <Menu restaurant={restaurant}/>
       </Row>
     </Container>

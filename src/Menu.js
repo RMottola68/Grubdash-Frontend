@@ -25,7 +25,10 @@ function Menu({ restaurant }) {
         // if(meal.length < 1)
         // window.confirm('')
         return(
-            <FoodItem meal={meal} key={meal.id}/>
+            <div className="text-bold text-center mt-3">
+            <FoodItem meal={meal} key={meal.id} price={meal.price}/>
+            <br></br>
+            </div>
         
         )
     })

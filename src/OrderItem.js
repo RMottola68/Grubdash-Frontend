@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 
 function OrderItem({ order, setOrder, orderItem }) {
   const [counter, setCounter] = useState(1);
+
   const foodObj = {
     name: orderItem.name,
     price: orderItem.price,
@@ -51,6 +52,7 @@ function OrderItem({ order, setOrder, orderItem }) {
       console.log(counter);
       console.log(orderItem);
 
+  
 
   // if count goes to 0, delete item on backend, 
 
@@ -68,16 +70,15 @@ function OrderItem({ order, setOrder, orderItem }) {
           +{" "}
         </Button>
         ${(orderItem.price)*counter}
-        <Button
-          className="mx-3"
-          variant="danger"
-          onClick={() => handleDelete()}
-        >
-          {" "}
-          Remove Item{" "}
+        <Button className="mx-3" variant="danger" onClick={() => handleDelete()}>
+          {" "} Remove Item {" "}
         </Button>
       </div>
+      <div className="m-3" style={{ fontSize: "25px" }}> 
+      
+      </div>
     </div>
+    
   );
 }
 
