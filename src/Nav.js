@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from 'react-bootstrap/Nav';
 import GrubDashLogo from './assets/GrubDashLogo.png'
 import { Link } from "react-router-dom";
-
 import { Container, Row, Col, Form, Button, Navbar } from 'react-bootstrap';
 
 
